@@ -446,10 +446,10 @@
     </div>
     <div id="testWrapper" class="hidden">
         <div id="startStopBtn" onclick="startStop()"></div><br />
-        <a class="privacy" href="#" onclick="I('privacyPolicy').style.display=''">Privacy</a>
-        <!-- <div id="serverArea">
+        <a class="privacy hidden" href="#" onclick="I('privacyPolicy').style.display=''">Privacy</a>
+        <div id="serverArea" class="hidden">
             Server: <select id="server" onchange="s.setSelectedServer(SPEEDTEST_SERVERS[this.value])"></select>
-        </div> -->
+        </div>
         <div id="chunkSizeArea">
             Download chunk size:
             <input type="number" max="200" min="1" onchange="setChunkSize(this.value)" value="100" /> MB
@@ -492,7 +492,7 @@
                 <img src="" id="resultsImg" />
             </div>
         </div>
-        <a href="https://github.com/librespeed/speedtest">Source code</a>
+        <a href="https://github.com/librespeed/speedtest" class="hidden">Source code</a>
     </div>
     <div id="privacyPolicy" style="display:none">
         <h2>Privacy Policy</h2>

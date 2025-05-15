@@ -23,7 +23,7 @@ jobs:
             os: ubuntu-22.04
             target: aarch64-unknown-linux-musl
             sys-type: linux
-            package-deb: yes
+            package-deb: no
 
           - build: linux-64-musl
             os: ubuntu-24.04
@@ -53,7 +53,7 @@ jobs:
           elif [ "${{ matrix.build }}" = "linux-64-musl" ]; then
             sudo apt-get install -y musl-tools
           elif [ "${{ matrix.build }}" = "linux-aarch64-musl" ]; then
-            sudo apt-get install -y musl-tools
+            sudo apt-get install -y musl-tools gcc-aarch64-linux-gnu
           fi
 
       - name: Install cargo deb packager
